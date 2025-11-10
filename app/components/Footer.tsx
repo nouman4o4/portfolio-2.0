@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="relative border-t border-slate-800/50 bg-slate-950">
       {/* Subtle gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-t from-slate-900/20 to-transparent pointer-events-none" />
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Main content - single row layout */}
@@ -17,8 +17,16 @@ export default function Footer() {
           {/* Social links */}
           <div className="flex items-center gap-3 order-1 sm:order-2">
             {[
-              { icon: Github, href: "#", label: "GitHub" },
-              { icon: Linkedin, href: "#", label: "LinkedIn" },
+              {
+                icon: Github,
+                href: "https://github.com/nouman4o4",
+                label: "GitHub",
+              },
+              {
+                icon: Linkedin,
+                href: "https://www.linkedin.com/in/nouman-khan-68372228b/",
+                label: "LinkedIn",
+              },
               { icon: Mail, href: "#", label: "Email" },
             ].map(({ icon: Icon, href, label }) => (
               <a
@@ -34,7 +42,7 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="h-px bg-gradient-to-r from-transparent via-slate-800 to-transparent my-6" />
+        <div className="h-px bg-linear-to-r from-transparent via-slate-800 to-transparent my-6" />
 
         {/* Copyright - minimal & centered */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-2 text-slate-500 text-sm">
