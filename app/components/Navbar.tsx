@@ -40,7 +40,7 @@ export default function Navbar() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="hover:text-cyan-400 transition-colors duration-300"
+                className="hover:text-cyan-400 font-semibold transition-colors duration-300"
               >
                 {item.label}
               </Link>
@@ -68,7 +68,7 @@ export default function Navbar() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="block hover:text-cyan-400 transition-colors duration-300"
+                className="block hover:text-cyan-400 font-medium transition-colors duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}

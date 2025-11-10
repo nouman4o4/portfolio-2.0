@@ -1,6 +1,6 @@
 "use client"
 
-import { Github, Linkedin, Mail, ArrowDown, Sparkles } from "lucide-react"
+import { ArrowDown } from "lucide-react"
 import Link from "next/link"
 import {
   FaHtml5,
@@ -60,16 +60,16 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex items-center justify-center py-8"
     >
-      {/* Animated gradient background */}
+      {/* Animated linear background */}
       {/* <div
         className="absolute inset-0 opacity-30 rounded-2xl"
         style={{
-          background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, rgba(6, 182, 212, 0.15), transparent 50%) rounded-2xl`,
+          background: `radial-linear(circle at ${mousePosition.x}% ${mousePosition.y}%, rgba(6, 182, 212, 0.15), transparent 50%) rounded-2xl`,
         }}
       /> */}
 
       {/* Grid pattern overlay */}
-      {/* <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.02)_1px,transparent_1px)] bg-[size:72px_72px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)] rounded-2xl" /> */}
+      <div className="absolute inset-0 bg-[linear-linear(rgba(255,255,255,.02)_1px,transparent_1px),linear-linear(90deg,rgba(255,255,255,.02)_1px,transparent_1px)] bg-size[72px_72px] mask-[radial-linear(ellipse_80%_50%_at_50%_50%,black,transparent)] rounded-2xl" />
 
       {/* Floating orbs */}
       <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-[128px] animate-pulse" />
@@ -86,10 +86,10 @@ export default function Hero() {
           <div className="relative inline-block">
             <span className="text-white">Hi, I'm </span>
             <span className="relative inline-block">
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
+              <span className="bg-linear-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent animate-linear bg-size-[200%_auto]">
                 Nouman
               </span>
-              <span className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 blur-xl opacity-30 animate-pulse" />
+              <span className="absolute -inset-1 bg-linear-to-r from-cyan-400 via-blue-500 to-purple-500 blur-xl opacity-30 animate-pulse" />
             </span>
           </div>
           <br />
@@ -105,9 +105,8 @@ export default function Hero() {
         </p>
 
         <p className="text-slate-500 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
-          Specialized in crafting high-performance web experiences with modern
-          technologies. Passionate about clean code, seamless UX, and
-          pixel-perfect design.
+          A self-taught web developer, Passionate about buliding full-stack
+          applications using the latest technologies.
         </p>
 
         {/* Enhanced CTA buttons */}
@@ -116,11 +115,11 @@ export default function Hero() {
             href="/projects"
             className="group relative px-8 py-4 rounded-full font-semibold overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 transition-transform group-hover:scale-105" />
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 blur transition-opacity" />
+            <div className="absolute inset-0 bg-linear-to-r from-cyan-500 via-blue-600 to-purple-600 transition-transform group-hover:scale-105" />
+            <div className="absolute inset-0 bg-linear-to-r from-cyan-400 via-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 blur transition-opacity" />
             <span className="relative z-10 flex items-center gap-2">
               View Projects
-              <ArrowDown className="w-4 h-4 group-hover:translate-y-1 transition-transform rotate-[-45deg]" />
+              <ArrowDown className="w-4 h-4 group-hover:translate-y-1 transition-transform -rotate-45" />
             </span>
           </Link>
 
@@ -129,7 +128,7 @@ export default function Hero() {
             className="group px-8 py-4 rounded-full font-semibold border-2 border-slate-700 bg-slate-900/50 backdrop-blur-sm hover:border-cyan-400/50 hover:bg-slate-800/50 transition-all duration-300 relative overflow-hidden"
           >
             <span className="relative z-10">Let's Talk</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute inset-0 bg-linear-to-r from-cyan-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity" />
           </Link>
         </div>
 
@@ -149,7 +148,7 @@ export default function Hero() {
               >
                 <div className="flex flex-col items-center gap-2 p-4 rounded-2xl bg-slate-900/50 border border-slate-800 backdrop-blur-sm hover:border-slate-700 transition-all duration-300 cursor-pointer hover:scale-110 hover:-translate-y-1">
                   {/* Glow effect on hover */}
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity blur-xl" />
+                  <div className="absolute inset-0 rounded-2xl bg-linear-to-r from-cyan-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity blur-xl" />
 
                   <Icon
                     className={`h-8 w-8 text-slate-400 ${color} transition-all duration-300 relative z-10`}
@@ -176,7 +175,7 @@ export default function Hero() {
           }
         }
 
-        @keyframes gradient {
+        @keyframes linear {
           0% {
             background-position: 0% 50%;
           }
@@ -188,8 +187,8 @@ export default function Hero() {
           }
         }
 
-        .animate-gradient {
-          animation: gradient 3s ease infinite;
+        .animate-linear {
+          animation: linear 3s ease infinite;
         }
       `}</style>
     </section>
