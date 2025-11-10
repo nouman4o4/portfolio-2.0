@@ -4,6 +4,7 @@
 import { useEffect, useState } from "react"
 import { Github, Linkedin, Mail, Menu, X } from "lucide-react"
 import Link from "next/link"
+import Logo from "./Logo"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -27,20 +28,13 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <Link
-            href="/"
-            className="text-2xl font-bold bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
-          >
-            DevPortfolio
-          </Link>
+          <Logo />
 
           <div className="hidden md:flex space-x-8">
             {[
               { label: "Home", href: "/" },
+              { label: "Projects", href: "/projects" },
               { label: "About", href: "/about" },
-              { label: "Services", href: "/services" },
-              { label: "Portfolio", href: "/portfolio" },
-              { label: "Testimonials", href: "/testimonials" },
               { label: "Contact", href: "/contact" },
             ].map((item) => (
               <Link
@@ -55,7 +49,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden"
+            className="md:hidden cursor-pointer"
           >
             {isMenuOpen ? <X /> : <Menu />}
           </button>
@@ -67,10 +61,8 @@ export default function Navbar() {
           <div className="px-4 py-6 space-y-4">
             {[
               { label: "Home", href: "/" },
+              { label: "Projects", href: "/projects" },
               { label: "About", href: "/about" },
-              { label: "Services", href: "/services" },
-              { label: "Portfolio", href: "/portfolio" },
-              { label: "Testimonials", href: "/testimonials" },
               { label: "Contact", href: "/contact" },
             ].map((item) => (
               <Link
