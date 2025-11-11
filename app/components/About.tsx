@@ -62,12 +62,12 @@ export default function About() {
   ]
 
   return (
-    <section id="about" className="py-20">
+    <section id="about" className="py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-16">
           {/* Header */}
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            <h2 className="text-4xl font-bold text-center mb-8 bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               About Me
             </h2>
             <p className="text-slate-300 text-lg leading-relaxed max-w-4xl">
