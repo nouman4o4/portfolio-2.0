@@ -1,8 +1,6 @@
-import Navbar from "../components/Navbar"
 import About from "../components/About"
-import Footer from "../components/Footer"
 import Link from "next/link"
-import { Github, Linkedin, Mail } from "lucide-react"
+import { Github, Linkedin, Facebook } from "lucide-react"
 import Logo from "../components/Logo"
 
 export default function AboutPage() {
@@ -27,31 +25,53 @@ export default function AboutPage() {
                 <div className="text-slate-400 text-sm">@developer-nomi</div>
               </div>
             </div>
-            <p className="text-slate-300 text-sm mt-4">
-              Building modern web apps with Next.js, TypeScript, and Tailwind.
+            <p className="text-slate-300 text-sm mt-4 text-center">
+              Building modern web apps with latest technologies.
             </p>
-            <div className="flex gap-4 mt-5 justify-center">
-              <a
-                href="#"
-                aria-label="GitHub"
-                className="hover:text-cyan-400 transition-colors"
-              >
-                <Github className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                aria-label="LinkedIn"
-                className="hover:text-cyan-400 transition-colors"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                aria-label="Email"
-                className="hover:text-cyan-400 transition-colors"
-              >
-                <Mail className="h-5 w-5" />
-              </a>
+
+            <div className="mt-5 grid grid-cols-3 divide-x divide-slate-800 rounded-md border border-slate-800 overflow-hidden">
+              {[
+                {
+                  name: "GitHub",
+                  icon: Github,
+                  href: "https://github.com/nouman4o4",
+                  color: "from-cyan-500/10 to-blue-500/10",
+                },
+                {
+                  name: "LinkedIn",
+                  icon: Linkedin,
+                  href: "https://www.linkedin.com/in/nouman-khan-68372228b/",
+                  color: "from-blue-500/10 to-sky-500/10",
+                },
+                {
+                  name: "Facebook",
+                  icon: Facebook,
+                  href: "#",
+                  color: "from-blue-400/10 to-indigo-500/10",
+                },
+              ].map(({ name, icon: Icon, href, color }, i) => (
+                <div
+                  key={name}
+                  className="group relative px-3 py-3 text-center cursor-pointer transition-all duration-300 hover:scale-[1.03]"
+                >
+                  {/* Glow background on hover */}
+                  <div
+                    className={`absolute inset-0 bg-linear-to-r ${color} opacity-0 group-hover:opacity-100 transition-opacity blur-xl`}
+                  />
+
+                  <a
+                    href={href}
+                    aria-label={name}
+                    target="_blank"
+                    className="relative z-10 inline-block"
+                  >
+                    <Icon className="h-5 w-5 mx-auto mb-2 text-slate-400 group-hover:text-cyan-400 transition-colors duration-300" />
+                    <div className="text-[11px] uppercase tracking-wide text-slate-400 group-hover:text-cyan-400 relative z-10 transition-colors duration-300">
+                      {name}
+                    </div>{" "}
+                  </a>
+                </div>
+              ))}
             </div>
           </div>
 

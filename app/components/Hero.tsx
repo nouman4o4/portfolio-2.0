@@ -3,18 +3,21 @@
 import { ArrowDown } from "lucide-react"
 import Link from "next/link"
 import {
+  SiJavascript,
+  SiTypescript,
+  SiTailwindcss,
+  SiNextdotjs,
+  SiExpress,
+  SiNpm,
+} from "react-icons/si"
+import {
   FaHtml5,
   FaCss3Alt,
-  FaReact,
   FaNodeJs,
+  FaReact,
   FaDatabase,
+  FaGithub,
 } from "react-icons/fa"
-import {
-  SiTypescript,
-  SiNextdotjs,
-  SiTailwindcss,
-  SiExpress,
-} from "react-icons/si"
 import { useEffect, useState } from "react"
 
 export default function Hero() {
@@ -39,20 +42,43 @@ export default function Hero() {
     { name: "HTML", icon: FaHtml5, color: "group-hover:text-orange-500" },
     { name: "CSS", icon: FaCss3Alt, color: "group-hover:text-blue-500" },
     {
-      name: "Tailwind",
-      icon: SiTailwindcss,
-      color: "group-hover:text-cyan-400",
+      name: "JavaScript",
+      icon: SiJavascript,
+      color: "group-hover:text-yellow-400",
     },
     {
       name: "TypeScript",
       icon: SiTypescript,
       color: "group-hover:text-blue-400",
     },
+    {
+      name: "React.js",
+      icon: FaReact,
+      color: "group-hover:text-cyan-400",
+    },
+    {
+      name: "Next.js",
+      icon: SiNextdotjs,
+      color: "group-hover:text-white",
+    },
+    {
+      name: "Tailwind",
+      icon: SiTailwindcss,
+      color: "group-hover:text-cyan-400",
+    },
     { name: "Node.js", icon: FaNodeJs, color: "group-hover:text-green-500" },
     { name: "Express.js", icon: SiExpress, color: "group-hover:text-gray-300" },
-    { name: "React.js", icon: FaReact, color: "group-hover:text-cyan-400" },
-    { name: "Next.js", icon: SiNextdotjs, color: "group-hover:text-white" },
     { name: "MongoDB", icon: FaDatabase, color: "group-hover:text-green-500" },
+    {
+      name: "npm",
+      icon: SiNpm,
+      color: "group-hover:text-red-500",
+    },
+    {
+      name: "Git/GitHub",
+      icon: FaGithub,
+      color: "group-hover:text-gray-400",
+    },
   ]
 
   return (
