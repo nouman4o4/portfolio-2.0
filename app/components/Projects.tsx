@@ -11,6 +11,7 @@ const projects = [
       "A modern blogging platform featuring a rich text editor, post management, user profiles, and interactive engagement features.",
     tech: ["React", "Node.js", "Express", "MongoDB"],
     repo: "https://github.com/nouman4o4/mern-blog-app",
+    liveUrl: "https://mern-blog-app-woad-rho.vercel.app/",
   },
   {
     title: "Real-Time Chat App",
@@ -20,14 +21,7 @@ const projects = [
       "A real-time chat application built with the MERN stack, socket.io, and elegant DaisyUI themes for smooth and responsive communication.",
     repo: "https://github.com/nouman4o4/chat-app",
   },
-  {
-    title: "YC Directory",
-    category: "Next.js 15 (Full Stack)",
-    image: "/project/yc-directory.png",
-    description:
-      "A startup discovery platform inspired by Y Combinator — allowing founders to pitch ideas, connect with entrepreneurs, and vote on innovative projects.",
-    repo: "https://github.com/nouman4o4/yc-directory",
-  },
+
   {
     title: "Portfolio 2.0",
     category: "Next.js (Frontend)",
@@ -36,6 +30,14 @@ const projects = [
       "A visually appealing and premium portfolio website showcasing projects, skills, and personal branding with a clean, modern layout.",
     liveUrl: "https://portfolio-2-0-weld-three.vercel.app/",
     repo: "https://github.com/nouman4o4/portfolio-2.0",
+  },
+  {
+    title: "YC Directory",
+    category: "Next.js 15 (Full Stack)",
+    image: "/project/yc-directory.png",
+    description:
+      "A startup discovery platform inspired by Y Combinator — allowing founders to pitch ideas, connect with entrepreneurs, and vote on innovative projects.",
+    repo: "https://github.com/nouman4o4/yc-directory",
   },
   {
     title: "Note Taking App",
