@@ -1,26 +1,21 @@
 "use client"
 
+import { IProject } from "@/types/interfaces"
 import { ExternalLink, Github } from "lucide-react"
+import Image from "next/image"
 import toast from "react-hot-toast"
 
-type Project = {
-  title: string
-  category: string
-  image: string
-  description: string
-  repo: string
-  liveUrl?: string
-}
-
-export default function ProjectCard({ project }: { project: Project }) {
+export default function ProjectCard({ project }: { project: IProject }) {
   return (
     <div className="group relative flex flex-col justify-between bg-slate-900/60 rounded-xl overflow-hidden border border-slate-800 hover:border-cyan-500 transition-all duration-300">
       <div>
         <div className="aspect-16/10 overflow-hidden">
-          <img
+          <Image
             src={project.image}
             alt={project.title}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            width={200}
+            height={200}
             loading="lazy"
           />
         </div>
