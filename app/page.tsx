@@ -1,5 +1,5 @@
 // app/page.tsx
-import Navbar from "./components/Navbar"
+import Navbar from "./components/navbar/Navbar"
 import Hero from "./components/Hero"
 import About from "./components/About"
 import Stats from "./components/Stats"

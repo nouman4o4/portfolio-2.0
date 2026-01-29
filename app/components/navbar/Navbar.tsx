@@ -4,7 +4,8 @@
 import { useEffect, useState } from "react"
 import { Github, Linkedin, Mail, Menu, X } from "lucide-react"
 import Link from "next/link"
-import Logo from "./Logo"
+import Logo from "../Logo"
+import MobileMenu from "./MobileMenu"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -56,27 +57,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {isMenuOpen && (
-        <div className="md:hidden bg-slate-900 border-t border-slate-800">
-          <div className="px-4 py-6 space-y-4">
-            {[
-              { label: "Home", href: "/" },
-              { label: "Projects", href: "/projects" },
-              { label: "About", href: "/about" },
-              { label: "Contact", href: "/contact" },
-            ].map((item) => (
-              <Link
-                key={item.label}
-                href={item.href}
-                className="block hover:text-cyan-400 font-medium transition-colors duration-300"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
+      <MobileMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
     </nav>
   )
 }
