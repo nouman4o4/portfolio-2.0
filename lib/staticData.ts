@@ -2,6 +2,16 @@ import { IProject } from "@/types/interfaces"
 
 export const projects: IProject[] = [
   {
+    title: "Fitness coaching website",
+    category: "Front-End Next.js",
+    description:
+      "A fitness coacing website for a personal brand. builds online trust and makes it easy to explore and apply for coaching.",
+    image: "/project/fitness-app.png",
+    repo: "https://github.com/nouman4o4/fitness-site",
+    liveUrl: "https://alexsaqib-fitness.vercel.app",
+    tech: ["Next.js", "Shadcn Ui"],
+  },
+  {
     title: "Mini pinterest",
     category: "Next.js Full Stack",
     image: "/project/miniPinterest.jpg",

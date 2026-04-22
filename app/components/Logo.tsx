@@ -14,7 +14,10 @@ export default function Logo({
       href="/"
       className={`text-2xl font-bold bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent ${className}`}
     >
-      {text}
+      {/* Text */}
+      <span className="font-bold font-sans tracking-tight  group-hover:text-cyan-400 transition-colors duration-300">
+        &lt;Nomi /&gt;
+      </span>
     </Link>
   )
 }
