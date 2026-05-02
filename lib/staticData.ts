@@ -49,6 +49,15 @@ export const projects: IProject[] = [
     repo: "https://github.com/nouman4o4/portfolio-2.0",
   },
   {
+    title: "Abaya Whatsapp shopping",
+    category: "Next.js",
+    image: "/project/abaya-shopping.png",
+    description:
+      "A high-converting fashion showcase website that transforms Instagram traffic into direct WhatsApp orders through a seamless and premium user experience.",
+
+    repo: "https://github.com/nouman4o4/abaya-whatsapp-shop",
+  },
+  {
     title: "YC Directory",
     category: "Next.js 15 (Full Stack)",
     image: "/project/yc-directory.png",
